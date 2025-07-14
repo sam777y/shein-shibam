@@ -112,7 +112,7 @@ const Index = () => {
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            طلب ذكي من <span className="text-yellow-400">شين</span>
+            اطلب الان من <span className="text-yellow-400">shein</span>
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             ما عليك سوى لصق روابط منتجات شين وسنتولى الباقي. 
@@ -172,7 +172,7 @@ const Index = () => {
       <footer className="bg-black border-t border-gray-800 py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-gray-400 mb-2">
-            © 2024 شابام شين - تسوق ذكي بطريقة بسيطة
+            © 2024 شي إن شبام - تسوق ذكي بطريقة بسيطة
           </p>
           <p className="text-yellow-400 text-sm font-medium">
             العنوان: صنعاء، شارع القيادة - بجوار صالة زهرة اللوتس

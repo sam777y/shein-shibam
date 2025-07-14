@@ -9,13 +9,13 @@ const Header = () => {
           <div className="bg-yellow-400 p-2 rounded-lg">
             <img 
               src="/lovable-uploads/149befe1-8604-4b82-8bb7-ffb7f1c96b75.png" 
-              alt="شابام شين" 
+              alt="شي إن شبام" 
               className="h-8 w-8 object-contain"
             />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-yellow-400">شابام شين</h1>
-            <p className="text-gray-300 text-sm">طلب ذكي من شين</p>
+            <h1 className="text-2xl font-bold text-yellow-400">شي إن شبام</h1>
+            <p className="text-gray-300 text-sm">اطلب الان من shein</p>
           </div>
         </div>
         
