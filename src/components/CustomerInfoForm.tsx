@@ -27,46 +27,46 @@ const CustomerInfoForm = ({ customerInfo, setCustomerInfo }: CustomerInfoFormPro
   };
 
   return (
-    <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
-      <div className="flex items-center space-x-3 mb-6">
+    <div className="bg-gray-900 rounded-xl p-6 border border-gray-800" dir="rtl">
+      <div className="flex items-center space-x-3 space-x-reverse mb-6">
         <div className="bg-yellow-400 p-2 rounded-lg">
           <User className="h-5 w-5 text-black" />
         </div>
-        <h2 className="text-xl font-semibold text-yellow-400">Customer Information</h2>
+        <h2 className="text-xl font-semibold text-yellow-400">معلومات العميل</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <div>
-          <Label className="text-yellow-400 font-medium mb-2 block">First Name *</Label>
+          <Label className="text-yellow-400 font-medium mb-2 block">الاسم الأول *</Label>
           <Input
             type="text"
-            placeholder="First name"
+            placeholder="الاسم الأول"
             value={customerInfo.firstName}
             onChange={(e) => updateCustomerInfo('firstName', e.target.value)}
-            className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
+            className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400 text-right"
             required
           />
         </div>
         
         <div>
-          <Label className="text-yellow-400 font-medium mb-2 block">Middle Name</Label>
+          <Label className="text-yellow-400 font-medium mb-2 block">الاسم الأوسط</Label>
           <Input
             type="text"
-            placeholder="Middle name"
+            placeholder="الاسم الأوسط"
             value={customerInfo.middleName}
             onChange={(e) => updateCustomerInfo('middleName', e.target.value)}
-            className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
+            className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400 text-right"
           />
         </div>
         
         <div>
-          <Label className="text-yellow-400 font-medium mb-2 block">Last Name *</Label>
+          <Label className="text-yellow-400 font-medium mb-2 block">الاسم الأخير *</Label>
           <Input
             type="text"
-            placeholder="Last name"
+            placeholder="الاسم الأخير"
             value={customerInfo.lastName}
             onChange={(e) => updateCustomerInfo('lastName', e.target.value)}
-            className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
+            className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400 text-right"
             required
           />
         </div>
@@ -74,44 +74,44 @@ const CustomerInfoForm = ({ customerInfo, setCustomerInfo }: CustomerInfoFormPro
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         <div>
-          <Label className="text-yellow-400 font-medium mb-2 block">Primary Phone *</Label>
+          <Label className="text-yellow-400 font-medium mb-2 block">رقم الهاتف الأساسي *</Label>
           <div className="relative">
-            <Phone className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+            <Phone className="absolute right-3 top-3 h-4 w-4 text-gray-400" />
             <Input
               type="tel"
               placeholder="+967 xxx xxx xxx"
               value={customerInfo.primaryPhone}
               onChange={(e) => updateCustomerInfo('primaryPhone', e.target.value)}
-              className="pl-10 bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
+              className="pr-10 bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400 text-right"
               required
             />
           </div>
         </div>
         
         <div>
-          <Label className="text-yellow-400 font-medium mb-2 block">Secondary Phone</Label>
+          <Label className="text-yellow-400 font-medium mb-2 block">رقم الهاتف الثانوي</Label>
           <div className="relative">
-            <PhoneCall className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+            <PhoneCall className="absolute right-3 top-3 h-4 w-4 text-gray-400" />
             <Input
               type="tel"
-              placeholder="+967 xxx xxx xxx (Optional)"
+              placeholder="+967 xxx xxx xxx (اختياري)"
               value={customerInfo.secondaryPhone}
               onChange={(e) => updateCustomerInfo('secondaryPhone', e.target.value)}
-              className="pl-10 bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
+              className="pr-10 bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400 text-right"
             />
           </div>
         </div>
       </div>
 
       <div>
-        <Label className="text-yellow-400 font-medium mb-2 block">Delivery Address *</Label>
+        <Label className="text-yellow-400 font-medium mb-2 block">عنوان التوصيل *</Label>
         <div className="relative">
-          <MapPin className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+          <MapPin className="absolute right-3 top-3 h-4 w-4 text-gray-400" />
           <Textarea
-            placeholder="Enter your complete delivery address including city, district, and landmarks..."
+            placeholder="أدخل عنوان التوصيل الكامل بما في ذلك المدينة والحي والمعالم..."
             value={customerInfo.address}
             onChange={(e) => updateCustomerInfo('address', e.target.value)}
-            className="pl-10 pt-10 min-h-[100px] bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400 resize-none"
+            className="pr-10 pt-10 min-h-[100px] bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400 resize-none text-right"
             required
           />
         </div>

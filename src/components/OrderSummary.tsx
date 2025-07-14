@@ -26,30 +26,30 @@ const OrderSummary = ({ productLinks, customerInfo }: OrderSummaryProps) => {
   const totalItems = validProducts.reduce((sum, link) => sum + link.quantity, 0);
 
   return (
-    <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
-      <div className="flex items-center space-x-3 mb-6">
+    <div className="bg-gray-900 rounded-xl p-6 border border-gray-800" dir="rtl">
+      <div className="flex items-center space-x-3 space-x-reverse mb-6">
         <div className="bg-yellow-400 p-2 rounded-lg">
           <Package className="h-5 w-5 text-black" />
         </div>
-        <h2 className="text-xl font-semibold text-yellow-400">Order Summary</h2>
+        <h2 className="text-xl font-semibold text-yellow-400">ملخص الطلب</h2>
       </div>
 
       <div className="space-y-4">
         <div className="flex items-center justify-between p-3 bg-black rounded-lg border border-gray-700">
-          <span className="text-gray-300">Total Products</span>
+          <span className="text-gray-300">إجمالي المنتجات</span>
           <span className="text-yellow-400 font-semibold">{validProducts.length}</span>
         </div>
         
         <div className="flex items-center justify-between p-3 bg-black rounded-lg border border-gray-700">
-          <span className="text-gray-300">Total Items</span>
+          <span className="text-gray-300">إجمالي القطع</span>
           <span className="text-yellow-400 font-semibold">{totalItems}</span>
         </div>
 
         {customerInfo.firstName && customerInfo.lastName && (
           <div className="border-t border-gray-700 pt-4">
-            <div className="flex items-center space-x-2 mb-2">
+            <div className="flex items-center space-x-2 space-x-reverse mb-2">
               <User className="h-4 w-4 text-yellow-400" />
-              <span className="text-gray-300 text-sm">Customer</span>
+              <span className="text-gray-300 text-sm">العميل</span>
             </div>
             <p className="text-white font-medium">
               {customerInfo.firstName} {customerInfo.middleName} {customerInfo.lastName}
@@ -59,9 +59,9 @@ const OrderSummary = ({ productLinks, customerInfo }: OrderSummaryProps) => {
 
         {customerInfo.primaryPhone && (
           <div>
-            <div className="flex items-center space-x-2 mb-2">
+            <div className="flex items-center space-x-2 space-x-reverse mb-2">
               <Phone className="h-4 w-4 text-yellow-400" />
-              <span className="text-gray-300 text-sm">Contact</span>
+              <span className="text-gray-300 text-sm">الاتصال</span>
             </div>
             <p className="text-white">{customerInfo.primaryPhone}</p>
             {customerInfo.secondaryPhone && (
@@ -72,9 +72,9 @@ const OrderSummary = ({ productLinks, customerInfo }: OrderSummaryProps) => {
 
         {customerInfo.address && (
           <div>
-            <div className="flex items-center space-x-2 mb-2">
+            <div className="flex items-center space-x-2 space-x-reverse mb-2">
               <MapPin className="h-4 w-4 text-yellow-400" />
-              <span className="text-gray-300 text-sm">Delivery Address</span>
+              <span className="text-gray-300 text-sm">عنوان التوصيل</span>
             </div>
             <p className="text-white text-sm leading-relaxed">{customerInfo.address}</p>
           </div>

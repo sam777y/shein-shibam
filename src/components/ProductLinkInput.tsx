@@ -37,19 +37,19 @@ const ProductLinkInput = ({ productLinks, setProductLinks }: ProductLinkInputPro
   };
 
   return (
-    <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
-      <div className="flex items-center space-x-3 mb-6">
+    <div className="bg-gray-900 rounded-xl p-6 border border-gray-800" dir="rtl">
+      <div className="flex items-center space-x-3 space-x-reverse mb-6">
         <div className="bg-yellow-400 p-2 rounded-lg">
           <ShoppingCart className="h-5 w-5 text-black" />
         </div>
-        <h2 className="text-xl font-semibold text-yellow-400">Product Links</h2>
+        <h2 className="text-xl font-semibold text-yellow-400">روابط المنتجات</h2>
       </div>
 
       <div className="space-y-4">
         {productLinks.map((link, index) => (
           <div key={link.id} className="bg-black rounded-lg p-4 border border-gray-700">
             <div className="flex items-center justify-between mb-3">
-              <Label className="text-yellow-400 font-medium">Product #{index + 1}</Label>
+              <Label className="text-yellow-400 font-medium">المنتج رقم {index + 1}</Label>
               {productLinks.length > 1 && (
                 <Button
                   type="button"
@@ -66,13 +66,13 @@ const ProductLinkInput = ({ productLinks, setProductLinks }: ProductLinkInputPro
             <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
               <div className="md:col-span-3">
                 <div className="relative">
-                  <Link className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                  <Link className="absolute right-3 top-3 h-4 w-4 text-gray-400" />
                   <Input
                     type="url"
-                    placeholder="Paste Shein product link here..."
+                    placeholder="الصق رابط المنتج من شين هنا..."
                     value={link.url}
                     onChange={(e) => updateProductLink(link.id, 'url', e.target.value)}
-                    className="pl-10 bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
+                    className="pr-10 bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400 text-right"
                     required
                   />
                 </div>
@@ -82,10 +82,10 @@ const ProductLinkInput = ({ productLinks, setProductLinks }: ProductLinkInputPro
                 <Input
                   type="number"
                   min="1"
-                  placeholder="Qty"
+                  placeholder="الكمية"
                   value={link.quantity}
                   onChange={(e) => updateProductLink(link.id, 'quantity', parseInt(e.target.value) || 1)}
-                  className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
+                  className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400 text-center"
                   required
                 />
               </div>
@@ -99,8 +99,8 @@ const ProductLinkInput = ({ productLinks, setProductLinks }: ProductLinkInputPro
         onClick={addProductLink}
         className="w-full mt-4 bg-yellow-400 hover:bg-yellow-500 text-black font-medium transition-all duration-200"
       >
-        <Plus className="h-4 w-4 mr-2" />
-        Add Another Product
+        <Plus className="h-4 w-4 ml-2" />
+        إضافة منتج آخر
       </Button>
     </div>
   );

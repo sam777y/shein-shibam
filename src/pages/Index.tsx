@@ -45,8 +45,8 @@ const Index = () => {
     
     if (validProducts.length === 0) {
       toast({
-        title: "Missing Product Links",
-        description: "Please add at least one valid Shein product link.",
+        title: "روابط المنتجات مفقودة",
+        description: "يرجى إضافة رابط منتج واحد على الأقل من شين.",
         variant: "destructive",
       });
       return false;
@@ -54,8 +54,8 @@ const Index = () => {
 
     if (!customerInfo.firstName.trim() || !customerInfo.lastName.trim()) {
       toast({
-        title: "Missing Name",
-        description: "Please enter your first and last name.",
+        title: "الاسم مفقود",
+        description: "يرجى إدخال الاسم الأول والأخير.",
         variant: "destructive",
       });
       return false;
@@ -63,8 +63,8 @@ const Index = () => {
 
     if (!customerInfo.primaryPhone.trim()) {
       toast({
-        title: "Missing Phone Number",
-        description: "Please enter your primary phone number.",
+        title: "رقم الهاتف مفقود",
+        description: "يرجى إدخال رقم الهاتف الأساسي.",
         variant: "destructive",
       });
       return false;
@@ -72,8 +72,8 @@ const Index = () => {
 
     if (!customerInfo.address.trim()) {
       toast({
-        title: "Missing Address",
-        description: "Please enter your delivery address.",
+        title: "العنوان مفقود",
+        description: "يرجى إدخال عنوان التوصيل.",
         variant: "destructive",
       });
       return false;
@@ -92,31 +92,31 @@ const Index = () => {
       sendWhatsAppMessage(message);
       
       toast({
-        title: "Order Submitted Successfully!",
-        description: "Your order has been sent via WhatsApp. We'll contact you soon.",
+        title: "تم إرسال الطلب بنجاح!",
+        description: "تم إرسال طلبك عبر الواتساب. سنتواصل معك قريباً.",
         className: "bg-green-900 border-green-700",
       });
     } catch (error) {
       toast({
-        title: "Error Submitting Order",
-        description: "There was an issue sending your order. Please try again.",
+        title: "خطأ في إرسال الطلب",
+        description: "حدث خطأ أثناء إرسال طلبك. يرجى المحاولة مرة أخرى.",
         variant: "destructive",
       });
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-900" dir="rtl">
       <Header />
       
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Smart <span className="text-yellow-400">Shein</span> Ordering
+            طلب ذكي من <span className="text-yellow-400">شين</span>
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Simply paste your Shein product links and we'll handle the rest. 
-            Fast, secure, and delivered to your doorstep in Yemen.
+            ما عليك سوى لصق روابط منتجات شين وسنتولى الباقي. 
+            سريع، آمن، ويصل إلى باب منزلك في اليمن.
           </p>
         </div>
 
@@ -143,27 +143,27 @@ const Index = () => {
               onClick={handleSubmitOrder}
               className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold py-4 text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              <Send className="h-5 w-5 mr-2" />
-              Submit Order via WhatsApp
+              <Send className="h-5 w-5 ml-2" />
+              إرسال الطلب عبر الواتساب
             </Button>
             
             <div className="bg-gray-900 rounded-lg p-4 border border-gray-800">
-              <div className="flex items-center space-x-2 mb-2">
+              <div className="flex items-center space-x-2 space-x-reverse mb-2">
                 <CheckCircle className="h-4 w-4 text-green-400" />
-                <span className="text-green-400 font-medium">Secure & Fast</span>
+                <span className="text-green-400 font-medium">آمن وسريع</span>
               </div>
               <p className="text-gray-400 text-sm">
-                Your order will be sent directly to our WhatsApp for immediate processing.
+                سيتم إرسال طلبك مباشرة إلى الواتساب للمعالجة الفورية.
               </p>
             </div>
           </div>
         </div>
         
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center space-x-2 text-gray-400">
+          <div className="inline-flex items-center space-x-2 space-x-reverse text-gray-400">
             <AlertCircle className="h-4 w-4" />
             <span className="text-sm">
-              We support all WhatsApp versions including Business, GB WhatsApp, and more
+              ندعم جميع إصدارات الواتساب بما في ذلك Business وGB WhatsApp وغيرها
             </span>
           </div>
         </div>
@@ -171,8 +171,11 @@ const Index = () => {
       
       <footer className="bg-black border-t border-gray-800 py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-gray-400">
-            © 2024 Shein Shibam - Smart Shopping Made Simple
+          <p className="text-gray-400 mb-2">
+            © 2024 شابام شين - تسوق ذكي بطريقة بسيطة
+          </p>
+          <p className="text-yellow-400 text-sm font-medium">
+            العنوان: صنعاء، شارع القيادة - بجوار صالة زهرة اللوتس
           </p>
         </div>
       </footer>
