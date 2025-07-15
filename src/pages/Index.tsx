@@ -180,7 +180,7 @@ const Index = () => {
             <div className="flex flex-col items-center space-y-3 group">
               <div className="bg-white rounded-xl p-4 shadow-lg transform group-hover:scale-105 transition-all duration-300">
                 <img 
-                  src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=100&h=60&fit=crop&crop=center"
+                  src="/lovable-uploads/022b6ed7-d7d7-49e8-b35a-069e88bfd0d3.png"
                   alt="شي إن"
                   className="h-12 w-20 object-contain"
                 />
