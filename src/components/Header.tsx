@@ -15,7 +15,7 @@ const Header = () => {
           </div>
           <div>
             <h1 className="text-2xl font-bold text-yellow-400">شي إن شبام</h1>
-            <p className="text-gray-300 text-sm">اطلب الان من shein</p>
+            <p className="text-gray-300 text-sm">اطلب الآن من شي إن</p>
           </div>
         </div>
         

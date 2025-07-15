@@ -112,7 +112,7 @@ const Index = () => {
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            اطلب الان من <span className="text-yellow-400">shein</span>
+            اطلب الآن من <span className="text-yellow-400">شي إن</span>
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             ما عليك سوى لصق روابط منتجات شين وسنتولى الباقي. 
@@ -165,6 +165,49 @@ const Index = () => {
             <span className="text-sm">
               ندعم جميع إصدارات الواتساب بما في ذلك Business وGB WhatsApp وغيرها
             </span>
+          </div>
+        </div>
+
+        {/* Partners Section */}
+        <div className="mt-20 bg-gray-900/50 rounded-2xl p-8 border border-gray-800">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-2">شركاؤنا</h3>
+            <p className="text-gray-400">نتعاون مع أفضل المنصات العالمية</p>
+          </div>
+          
+          <div className="flex items-center justify-center gap-12 flex-wrap">
+            {/* Shein Official Logo */}
+            <div className="flex flex-col items-center space-y-3 group">
+              <div className="bg-white rounded-xl p-4 shadow-lg transform group-hover:scale-105 transition-all duration-300">
+                <img 
+                  src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=100&h=60&fit=crop&crop=center"
+                  alt="شي إن"
+                  className="h-12 w-20 object-contain"
+                />
+              </div>
+              <span className="text-gray-300 text-sm font-medium">شي إن الرسمي</span>
+            </div>
+
+            {/* Partnership Icon */}
+            <div className="text-yellow-400">
+              <div className="flex items-center space-x-2 space-x-reverse">
+                <div className="w-8 h-0.5 bg-gradient-to-r from-yellow-400 to-transparent"></div>
+                <span className="text-2xl">⚡</span>
+                <div className="w-8 h-0.5 bg-gradient-to-l from-yellow-400 to-transparent"></div>
+              </div>
+            </div>
+
+            {/* Our Logo */}
+            <div className="flex flex-col items-center space-y-3 group">
+              <div className="bg-yellow-400 rounded-xl p-4 shadow-lg transform group-hover:scale-105 transition-all duration-300">
+                <img 
+                  src="/lovable-uploads/149befe1-8604-4b82-8bb7-ffb7f1c96b75.png" 
+                  alt="شي إن شبام" 
+                  className="h-12 w-12 object-contain"
+                />
+              </div>
+              <span className="text-gray-300 text-sm font-medium">شي إن شبام</span>
+            </div>
           </div>
         </div>
       </main>
